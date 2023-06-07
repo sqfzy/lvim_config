@@ -1,10 +1,9 @@
-local M = {}
 ----------------------- 输入函数后自动补全括号 ------------------------
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp = require("cmp")
 local handlers = require("nvim-autopairs.completion.handlers")
 cmp.event:on(
-  "confirm_done", -- 当cmp发生confirm_done(即<C-m>)时自动补全括号
+  "confirm_done",   -- 当cmp发生confirm_done(即<C-m>)时自动补全括号
   cmp_autopairs.on_confirm_done({})
 -- cmp_autopairs.on_confirm_done({
 -- 	filetypes = {
@@ -398,5 +397,3 @@ local ts_conds = require("nvim-autopairs.ts-conds")
 -- 	Rule("$", "$", "lua"):with_pair(ts_conds.is_not_ts_node({ "function" })),
 -- })
 -- end
---
-return M
