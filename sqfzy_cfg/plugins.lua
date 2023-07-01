@@ -1,45 +1,52 @@
 lvim.plugins = {
-	{
-		"mg979/vim-visual-multi",
-		event = "BufRead",
-		-- config = function()
-		--   require("keymappings").set_multi_keymaps()
-		-- end
-	}, -- 多光标
-	{
-		"ggandor/leap.nvim",
-		name = "leap",
-		config = function()
-			require("plugins_config.leap")
-		end,
-	},
-	{ "catppuccin/nvim", name = "catppuccin" },
-	{
-		"zbirenbaum/copilot.lua",
-		config = function()
-			require("plugins_config.copilot")
-		end,
-		cmd = "Copilot",
-		event = "InsertEnter",
-	},
-	{
-		"folke/zen-mode.nvim",
-		config = function()
-			require("plugins_config.zen-mode")
-		end,
-		cmd = "ZenMode",
-	},
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		config = function()
-			require("plugins_config.noice")
-		end,
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
-	},
+  {
+    "mg979/vim-visual-multi",
+    event = "BufRead",
+    -- config = function()
+    --   require("keymappings").set_multi_keymaps()
+    -- end
+  }, -- 多光标
+  {
+    "ggandor/leap.nvim",
+    name = "leap",
+    config = function()
+      require("plugins_config.leap")
+    end,
+  },
+  { "catppuccin/nvim", name = "catppuccin" },
+  {
+    "zbirenbaum/copilot.lua",
+    config = function()
+      require("plugins_config.copilot")
+    end,
+    cmd = "Copilot",
+    event = "InsertEnter",
+  },
+  {
+    "folke/zen-mode.nvim",
+    config = function()
+      require("plugins_config.zen-mode")
+    end,
+    cmd = "ZenMode",
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("plugins_config.noice")
+    end,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+  },
+  {
+    "simrat39/symbols-outline.nvim",
+    cmd = "SymbolsOutline",
+    config = function()
+      require("plugins_config.outline")
+    end,
+  },
 }
 lvim.builtin.cmp.cmdline.enable = true
 -- return {

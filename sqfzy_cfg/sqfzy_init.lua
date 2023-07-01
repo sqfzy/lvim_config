@@ -12,6 +12,9 @@ require("lsp.null-ls")
 
 local luasnip = require("luasnip")
 
+require("plugins_config.autopairs")
+require("plugins_config.cmp")
+
 -- 启用历史记录
 luasnip.config.set_config({
 	history = true,
