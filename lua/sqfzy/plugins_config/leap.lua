@@ -1,0 +1,78 @@
+local ok, leap = pcall(require, "leap")
+if not ok then
+	vim.notify('"plugins_config/leap.lua:" cannot require leap')
+	return
+end
+require("sqfzy.keymappings").set_leap_keymaps()
+
+-- leap.add_default_mappings()
+leap.opts.case_sensitive = false -- 是否大小写敏感
+leap.opts.safe_labels = { "q", "w", "e", "r", "t", "y", "u", "i", "o", "p" }
+leap.opts.labels = {
+	"q",
+	"w",
+	"e",
+	"r",
+	"t",
+	"y",
+	"u",
+	"i",
+	"o",
+	"p",
+	"s",
+	"f",
+	"n",
+	"j",
+	"k",
+	"l",
+	"h",
+	"o",
+	"d",
+	"w",
+	"e",
+	"m",
+	"b",
+	"u",
+	"y",
+	"v",
+	"r",
+	"g",
+	"t",
+	"c",
+	"x",
+	"/",
+	"z",
+	"S",
+	"F",
+	"N",
+	"J",
+	"K",
+	"L",
+	"H",
+	"O",
+	"D",
+	"W",
+	"E",
+	"M",
+	"B",
+	"U",
+	"Y",
+	"V",
+	"R",
+	"G",
+	"T",
+	"C",
+	"X",
+	"?",
+	"Z",
+}
+leap.opts.special_keys = {
+	repeat_search = "<enter>",
+	next_phase_one_target = "<enter>",
+	next_target = { "<enter>", ";" },
+	prev_target = { "<tab>", "," },
+	next_group = "<space>",
+	prev_group = "<tab>",
+	multi_accept = "<enter>",
+	multi_revert = "<backspace>",
+}
